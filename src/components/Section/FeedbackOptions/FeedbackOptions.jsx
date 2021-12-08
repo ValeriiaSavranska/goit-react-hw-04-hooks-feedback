@@ -1,4 +1,5 @@
 import styles from './FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <>
@@ -31,5 +32,9 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => (
     <h2 className={styles.title}>Statistic</h2>
   </>
 );
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func,
+};
 
 export default FeedbackOptions;
