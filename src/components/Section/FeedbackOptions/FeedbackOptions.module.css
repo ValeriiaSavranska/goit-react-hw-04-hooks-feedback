@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  border-radius: 20px;
+  background-color: rgb(178, 238, 81);
+  border: none;
+  font-size: 20px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgb(161, 235, 42);
+  box-shadow: 2px 4px 6px rgb(103, 157, 16);
+}
+
+.title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: rgb(233, 255, 197);
+}
