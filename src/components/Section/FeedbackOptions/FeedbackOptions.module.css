@@ -5,6 +5,7 @@
 }
 
 .btn {
+  text-transform: capitalize;
   padding: 15px 30px;
   border-radius: 20px;
   background-color: rgb(178, 238, 81);
