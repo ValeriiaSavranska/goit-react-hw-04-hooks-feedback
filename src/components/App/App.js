@@ -11,17 +11,9 @@ class App extends Component {
     bad: 0,
   };
 
-  hahdelClick = event => {
+  hahdelClick = option => {
     this.setState(prevState => {
-      if (event.target.id === 'good') {
-        return { good: prevState.good + 1 };
-      }
-      if (event.target.id === 'neutral') {
-        return { neutral: prevState.neutral + 1 };
-      }
-      if (event.target.id === 'bad') {
-        return { bad: prevState.bad + 1 };
-      }
+      return { [option]: prevState[option] + 1 };
     });
   };
 

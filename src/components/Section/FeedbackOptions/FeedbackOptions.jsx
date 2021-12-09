@@ -4,36 +4,23 @@ import PropTypes from 'prop-types';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <>
     <div className={styles.container}>
-      <button
-        id="good"
-        className={styles.btn}
-        type="button"
-        onClick={onLeaveFeedback}
-      >
-        Good
-      </button>
-      <button
-        id="neutral"
-        className={styles.btn}
-        type="button"
-        onClick={onLeaveFeedback}
-      >
-        Neutral
-      </button>
-      <button
-        id="bad"
-        className={styles.btn}
-        type="button"
-        onClick={onLeaveFeedback}
-      >
-        Bad
-      </button>
+      {Object.keys(options).map(option => (
+        <button
+          key={option}
+          className={styles.btn}
+          type="button"
+          onClick={() => onLeaveFeedback(option)}
+        >
+          {option}
+        </button>
+      ))}
     </div>
     <h2 className={styles.title}>Statistic</h2>
   </>
 );
 
 FeedbackOptions.propTypes = {
+  options: PropTypes.object,
   onLeaveFeedback: PropTypes.func,
 };
 
